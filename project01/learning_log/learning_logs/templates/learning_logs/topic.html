@@ -15,6 +15,9 @@
         <li>
             <p>{{ entry.date_added | date:'M d, Y H:i' }}</p><!--o pipeline serve como indicaçao de formataçao para o django-->
             <p>{{ entry.text | linebreaks }}</p>
+            <p>
+                <a href="{% url 'edit_entry' entry.id %}">Editar anotação</a>
+            </p>
         </li>
 
         {% empty %}
