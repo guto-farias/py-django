@@ -12,7 +12,9 @@
         <a href="{% url 'topics' %}">tópicos</a>
         {% if user.is_authenticated %}
             Olá, {{ user.username }}
+            <a href="{% url 'logout' %}">sair</a> <!--manda pra rota logout que manda pra view logout-->
         {% else %}
+            <a href="{% url 'register' %}">cadastre-se</a>
             <a href="{% url 'login' %}">entrar</a>
         {% endif %}
     </p>
