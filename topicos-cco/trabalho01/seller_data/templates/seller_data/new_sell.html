@@ -1,0 +1,14 @@
+{% extends "seller_data/base.html" %}
+
+
+{% block content %}
+
+    <p>ADICIONE A NOVA VENDA A SEGUIR</p>
+        <form action="{% url 'new_sell' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button name="submit">Adicionar</button>
+    </form>
+
+
+{% endblock content %}
