@@ -3,16 +3,16 @@
 
 {% block content %}
 
-    <ul>
+    <ul class="list-group">
         {% for topic in topics %}
-            <li>
-                <a href="{% url 'topic' topic.id %}"> {{ topic }} </a>
+            <li class="list-group-item">
+                <a href="{% url 'topic' topic.id %}" class="text-reset text-decoration-none"> {{ topic }} </a>
             </li>
         {% empty %}
-            <li>não há tópicos</li>
+            <li class="list-group-item">não há tópicos</li>
         {% endfor %}
     </ul>
 
-    <a href="{% url 'new_topic' %}">Adicionar novos tópicos</a>
+    <a href="{% url 'new_topic' %}" class="text-reset btn btn-link"">Adicionar novos tópicos</a>
 
 {% endblock content %}

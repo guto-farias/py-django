@@ -7,7 +7,7 @@
 
     <p>Anotações: </p>
 
-    <p><a href="{% url 'new_entry' topic.id %}">Adicione uma nova anotação:</a></p> <!--pega o id do topic que ta sendo passado como variavel acima-->
+    <p><a href="{% url 'new_entry' topic.id %}" class="text-reset btn btn-link">Adicione uma nova anotação:</a></p> <!--pega o id do topic que ta sendo passado como variavel acima-->
 
     <ul>
         {% for entry in entries %}
@@ -16,7 +16,7 @@
             <p>{{ entry.date_added | date:'M d, Y H:i' }}</p><!--o pipeline serve como indicaçao de formataçao para o django-->
             <p>{{ entry.text | linebreaks }}</p>
             <p>
-                <a href="{% url 'edit_entry' entry.id %}">Editar anotação</a>
+                <a href="{% url 'edit_entry' entry.id %}" class="text-reset btn btn-link">Editar anotação</a>
             </p>
         </li>
 
